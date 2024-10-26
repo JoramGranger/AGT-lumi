@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import {Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import '@/app/globals.css';
 
-const poppins = Poppins({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '700'], // Customize based on the weights you need
-  });
+// Import Poppins
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "AGT",
-  description: "Intelligent, Interactive, Responsive A.I.",
+  description: "Intelligent, Interactive, Responsive",
 };
 
 export default function RootLayout({
@@ -18,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="relative">
       <body className={poppins.className}>
         {children}
       </body>
